@@ -1,0 +1,72 @@
+.popup-wrap{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,0.14);
+  align-items: center;
+  justify-content: center;
+  &.active{
+    display:flex;
+  }
+  .popup-container{
+    max-width: 800px;
+    background: $color-white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 30px 0 rgba(0,0,0,0.15);
+    padding:5.00rem 9.13rem;
+    text-align: center;
+    header{
+      position: relative;
+      .popup-title{
+        font-size:2.25rem ; 
+        color:$color-primary;   
+        >p{
+          font-family: 'OTEnjoystoriesBA', sans-serif;
+          span{
+            font-family: 'OTEnjoystoriesBA', sans-serif;
+          }
+          &:first-child{
+            font-size: 2.67em;
+            line-height: 1.1em;
+          }
+        }
+      }
+      .close{
+        position: absolute;
+        top:0;
+        right:0;
+        width: 24px;
+        height: 24px;
+        background-color: pink;
+      }
+    }
+    .img-wrap{
+      margin:2.50rem auto 3.75rem;
+      width: clamp(15rem, 40vw, 27.38rem);
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .popup-wrap{
+    .popup-container{
+      max-width: calc(100% - 30px);
+      padding:2.5rem 2.81rem;
+      header{
+        .popup-title{
+          >p:first-child{
+            font-size: 1.78em;
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
