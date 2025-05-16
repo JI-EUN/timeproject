@@ -1,3 +1,10 @@
+body{
+  background-color: $color-primary;
+  display: grid;
+  word-break:break-word;
+  min-width: 320px;
+}
+
 //공통 class
 .tvn-font{
   font-family: 'OTEnjoystoriesBA', sans-serif;;
@@ -6,11 +13,11 @@ button{
   cursor: pointer;
 }
 .btn{
-  font-size: clamp(0.88rem,3vw,1.50rem);
+  font-size: 2.4rem;
   font-weight: $font-weight-bold;
-  border-radius: 12px;
-  line-height: 1em; 
-  padding:0.83em 2.08em;
+  border-radius: 1.2rem;
+  line-height: 1; 
+  padding:2rem 5rem;
   display: inline-block;
   transition-property:background-color;
   transition-duration: 0.5s;
@@ -29,21 +36,16 @@ button{
   color: $color-primary;
 }
 
-body{
-  background-color: $color-primary;
-  display: grid;
-  word-break:break-word;
-  min-width: 360px;
-}
 
 
 input[type="text"]{
   background-color: $color-white;
   border:none;
-  border-radius: 8px;
-  padding:0.67em;
+  border-radius: 0.8rem;
+  padding:1.6rem;
   text-align: center;
-  width: clamp(9.75rem,25vw,14.25rem);
+  font-size: 2.4rem;
+  width: 22.8rem;
   &::placeholder{
     color:$color-gray;
   }
@@ -51,47 +53,45 @@ input[type="text"]{
 
 //header
 header{
-  h1{
-    width:clamp(278px,70vw,35.25rem); ;
-    margin:auto;
-  }
+  width:56.4rem;
+  margin:auto;
 }
 
 //main
 main{
-  padding:7.50rem 0;
+  padding:12rem 0;
   text-align: center;
   color:$color-white;
-  max-width: calc(100% - 30px);
+  max-width: calc(100% - 3rem);
   margin:auto;
   .main-phrase{
+    margin-bottom: 10rem;
     q{
       color:#F5DF4D;
-      font-size: clamp(1.38rem,3.8vw,2.25rem);
       font-weight: bold;
       display: block;
-      margin:1.44em auto 2.22em;
-      line-height: 1.111em;
+      font-size: 3.6rem;
+      margin:5.2rem auto 8rem;
+      line-height: 1.11;
     }
     .sub-phrase{
-      margin:0 auto 5.56em;
-      font-size: clamp(0.88rem,2.3vw,1.13rem);
+      font-size: 1.8rem;
       line-height: 1.56em;
       display:flex;
       align-items: center;
       justify-content: center;
-      gap:20px;
+      gap:2rem;
       b{
         font-weight: $font-weight-bold;
-        font-size: 1.33rem;
+        font-size: 2.2rem
       }
       &::after,
       &::before{
         content: "";
         background: url('./../../src/img/quotes.svg') no-repeat;
         background-size: contain;
-        width: 36px;
-        height: 32px;
+        width: 3.6rem;
+        height:3.2rem;
       }
       &::before{
         left:0;
@@ -105,24 +105,22 @@ main{
 
   .time-calc{
     .write-form-wrap{
-      p,input{
-        font-size: clamp(0.88rem,3vw,1.50rem);
-      }
       p{
-        margin-top:0.83em;
+        font-size: 2.4rem;
+        margin-top:2rem;
         &:first-child{
           margin-top:0;
         }
       }
       input{
-        margin:0 0.83em;
+        margin:0 2rem;
       }
     }
     .btn-wrap{
       display: inline-block;
       position: relative;
+      margin-top:12rem;
       .main-bg-btn{
-        margin-top:5.00em;
         &:hover{
           background-color:$color-white;
           color: $color-primary;
@@ -131,89 +129,102 @@ main{
       &::after{
         content: "";
         position: absolute;
-        width: clamp(2.69rem,7vw,4.00rem);
-        height: clamp(3rem,7.5vw,4.50rem) ;
+        width: 6.4rem;
+        height: 7.2rem;
         background:url('./../img/icon.png') no-repeat 50%;
         background-size: contain;
-        right: -4.50em;
-        bottom: -1.38em;
+        right:-7.2rem;
+        bottom: -2.2rem;
       }
     }
   }
 
   .time-result{
-    margin-top:8.88rem;
+    margin-top:14.2rem;
     p{
-      font-size:clamp(0.75rem,2.4vw,1.50rem); 
+      font-size:2.4rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap:12px;
+      gap:1.2rem;
       margin-top:0.83em;
       &:first-child{
         margin-top:0;
       }
       b{
         font-weight: $font-weight-bold;
-        font-size: 3.00em;
+        font-size: 7.2rem;
       }
     }
   }
   .link-btns{
-    margin-top:7.50em;
+    margin-top:12rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:12px;
+    gap:1.2rem;
   }
 }
 //footer
 footer{
   text-align: center;   
-  padding:0 0 6.63rem;   
+  padding:0 0 10.8rem;   
   color: $color-white;
   h2{
-    width: clamp(8.93rem,21vw,10.50rem);
-    margin:0 auto 1.25em;
+    width: 16.8rem;
+    margin:0 auto 2rem;
   }
   p{
     font-family: "Noto Sans KR", sans-serif;
     line-height: 1.17em;
-    font-size: clamp(0.6rem,1.35vw,0.75rem);
+    font-size: 1.2rem;
   }
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .btn{
-    padding:1.14em 1.71em;
+    font-size: 1.4rem;
+    padding:2rem 3.8rem;
     br{
-      display: inline;;
+      display: inline;
     }
+  }
+  input[type="text"]{
+    font-size: 1.4rem;
+    padding:1.2rem;
+    width: clamp(13rem,40vw,15.6rem);
   }
   //main
   main{
-    padding:2.86rem 0 4.29rem;
+    padding:4rem 0 6rem;
+    header{
+      width: 27.8rem;
+    }
     .main-phrase{
+      margin-bottom:6rem;
       q{
+        font-size: 2.2rem;
         margin:1.45em auto;
       }
       .sub-phrase{
         gap:0;
-        margin-bottom:4.29em;
+        font-size: 1.4rem;
         b{
-          font-size: 1em;
+          font-size:1.4rem;
         }
         &::before,
         &::after{
-          width: 1.25rem;
-          height:1.13rem;
+          width: 2rem;
+          height:1.8rem;
         }
       }
     }
     .time-calc{
       .write-form-wrap{
         p{
+          font-size: 1.4rem;
+          margin-top:1.2rem;
           &:nth-child(2){
             display: flex;
             flex-wrap: wrap;
@@ -221,40 +232,58 @@ footer{
             align-items: center;
             span{
               width: 100%;
-              margin-bottom:0.86em;
+              margin-bottom:1.2rem;
             }
           }
         }
+        input{
+          margin:0 0.8rem;
+        }
       }
       .btn-wrap{
-        .main-bg-btn{
-          padding:1.43em 2.71em;
-        }
+        margin-top:8rem;
         &::after{
-          right:-3.1em;
-          bottom:-1em;
+          width: 4.3rem;
+          height: 4.8rem;
+          right:-5rem;
+          bottom:-1.6rem;;
         }
       } 
     }
 
     .time-result{
-      margin-top:4.25rem;
+      margin-top:6.8rem;
       p{
+        font-size: 1.2rem;
         b{
-          font-size: 2em;
+          font-size: 2.4rem;
         }
       }
     }
     .link-btns{
-      margin-top:3.25rem;
-      gap:8px
+      margin-top:5.2rem;
+      gap:0.8rem;
+      li:nth-child(1){
+        flex-grow: 2;
+      }
+      li:nth-child(2){
+        flex-grow: 1;
+      }
+      .btn{
+        padding-inline: 0;
+        width: 100%;
+      }
     }
   }
   //footer
   footer{
-    padding-bottom:3.43rem;
+    padding-bottom:4.8rem;
     h2{
-      margin-bottom:0.86em;
+      margin-bottom:1.2rem;
+      width: 12.5rem;
+    }
+    p{
+      font-size: 0.9rem;
     }
   }
 }
