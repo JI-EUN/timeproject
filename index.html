@@ -22,18 +22,18 @@
         </section>
         <section class="time-calc">
             <h2 class="text-ir">시간법칙 계산해보기</h2>
-            <form action="">
+            <form>
                 <div class="write-form-wrap">
-                    <p>나는<input type="text" placeholder="예&#41;프로그래밍"/>전문가가 될 것이다</p>
-                    <p><span>그래서 앞으로 매일 하루에</span><input type="text" placeholder="예&#41;5시간"/>시간씩 훈련할 것이다.</p>
+                    <p>나는<input type="text" placeholder="예&#41;프로그래밍" id="input-role"/>전문가가 될 것이다</p>
+                    <p><span>그래서 앞으로 매일 하루에</span><input type="text" placeholder="예&#41;5시간" id="input-time"/>시간씩 훈련할 것이다.</p>
                 </div>
                 <div class="btn-wrap">
-                    <button class="btn main-bg-btn">나는 며칠 동안 훈련을 해야<br> 1만 시간이 될까?</button>
+                    <button class="btn main-bg-btn" type="button" onclick="checkTime()">나는 며칠 동안 훈련을 해야<br> 1만 시간이 될까?</button>
                 </div>
             </form>
             <div class="time-result">
-                <p>당신은<b>프로그래밍</b>전문가가 되기 위해서</p>
-                <p>대략<b>5110</b>일 이상 훈련하셔야 합니다! :&#41;</p>
+                <p>당신은<b id="result-role">??</b>전문가가 되기 위해서</p>
+                <p>대략<b id="result-time">??</b>일 이상 훈련하셔야 합니다! :&#41;</p>
             </div>
             <ul class="link-btns">
                 <li>
@@ -63,6 +63,19 @@
             <button class="btn main-bg-btn close-btn" onclick="document.querySelector('dialog').close()">종료하고 진짜 훈련하러 가기 GO!GO!</button>
         </div>
     </dialog>
-</body>
 
+    <script>
+        function checkTime(){
+            let roleValue = document.getElementById('input-role').value;
+            let time = document.getElementById('input-time').value;
+            let array =[roleValue,Math.ceil(10000/time)];
+            if(roleValue == ''|| time>24|| time ==''){
+                alert('input값 확인필요합니다')
+            }else{
+                document.getElementById('result-role').innerText = array[0];
+                document.getElementById('result-time').innerText = array[1];;
+            }
+        }
+    </script>
+</body>
 </html>

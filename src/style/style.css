@@ -123,7 +123,7 @@ dialog {
 
 @media screen and (max-width: 1024px) {
   html {
-    font-size: 70%;
+    font-size: 80%;
   }
 }
 
@@ -248,7 +248,7 @@ main .main-phrase .sub-phrase {
 
 main .main-phrase .sub-phrase b {
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 main .main-phrase .sub-phrase::after, main .main-phrase .sub-phrase::before {
