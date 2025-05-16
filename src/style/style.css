@@ -262,6 +262,7 @@ main .main-phrase .sub-phrase::after {
 }
 
 main .time-calc .write-form-wrap p {
+  flex-wrap: wrap;
   font-size: 2.4rem;
   margin-top: 2rem;
 }
