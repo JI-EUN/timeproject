@@ -78,7 +78,10 @@ dialog{
 	max-width: inherit;
 	max-height: inherit;
 }
-
+.btn:focus-visible,
+input:focus-visible{
+  outline:6px solid blue;
+}
 @media screen and (max-width: 1024px) {
 	html{
 		font-size: 80%; 
