@@ -36,7 +36,9 @@
                 <p>대략<b>5110</b>일 이상 훈련하셔야 합니다! :&#41;</p>
             </div>
             <ul class="link-btns">
-                <li><button class="popup-btn btn main-bg-btn">훈련하러 가기 GO! GO!</button></li>
+                <li>
+                    <button class="popup-btn btn main-bg-btn" onclick="document.querySelector('dialog').showModal()">훈련하러 가기 GO! GO!</button>
+                </li>
                 <li><a href="" class="btn white-bg-btn">공유하기</a></li>
             </ul>
         </section>
@@ -48,7 +50,7 @@
         </p>
     </footer>
 
-    <article id="popup" class="popup-wrap">
+    <dialog class="popup-wrap">
         <div class="popup-container">
             <h2 class="text-ir">팝업내용</h2>
             <div class="popup-title">
@@ -58,22 +60,9 @@
             <div class="img-wrap">
                 <img src="./src/img/licat-img.png" alt="라이캣">
             </div>
-            <button class="btn main-bg-btn close-btn">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+            <button class="btn main-bg-btn close-btn" onclick="document.querySelector('dialog').close()">종료하고 진짜 훈련하러 가기 GO!GO!</button>
         </div>
-    </article>
+    </dialog>
 </body>
 
-<script>
-    let btn = document.querySelector('.popup-btn');
-    let closeBtn = document.querySelector('.close-btn');
-    let popContent = document.querySelector('#popup');
-    btn.addEventListener('click',()=>{
-        document.body.setAttribute("style", "overflow:hidden");
-        popContent.classList.add('active');
-    })
-    closeBtn.addEventListener('click',()=>{
-        document.body.setAttribute("style", "overflow:auto");
-        popContent.classList.remove('active');
-    })
-</script>
 </html>

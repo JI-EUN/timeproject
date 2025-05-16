@@ -113,6 +113,14 @@ html {
   font-size: 62.5%;
 }
 
+dialog {
+  padding: 0;
+  margin: 0;
+  border: none;
+  max-width: inherit;
+  max-height: inherit;
+}
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 70%;
@@ -465,33 +473,19 @@ footer p {
 }
 
 .popup-wrap {
-  display: none;
   position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.14);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.popup-wrap.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  -webkit-box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
 }
 
 .popup-wrap .popup-container {
   max-width: 80rem;
   background: #ffffff;
-  border-radius: 2rem;
-  -webkit-box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
   padding: 8rem 14.6rem;
   text-align: center;
 }
@@ -521,7 +515,6 @@ footer p {
 
 @media screen and (max-width: 1024px) {
   .popup-wrap .popup-container {
-    max-width: calc(100% - 30px);
     padding-block: 4rem;
     padding-inline: clamp(3.5rem, 10vw, 4.5rem);
   }
