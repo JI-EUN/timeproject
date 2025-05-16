@@ -1,4 +1,4 @@
-# ✨ 1만시간의 법칙
+# ✨ 1만시간의 법칙🕰️
 
 시멘틱 마크업, 접근성, CSS 변수, 반응형 웹 등 **웹 표준과 유지보수성**을 고려하여 구축한 퍼블리싱 프로젝트입니다.
 
@@ -118,6 +118,26 @@ input[type="text"] {
 
 > 📌 breakpoints 없이도 다양한 해상도에서 자연스럽게 대응 가능!
 
+---
+
+### 6. ⚙️ JavaScript 기능 구현 및 `<dialog>` 팝업 작업
+
+- HTML5의 `<dialog>` 요소를 활용한 팝업 구현
+- 버튼 클릭 시 JavaScript의 `.showModal()` 메서드로 팝업 표시
+- 팝업 내부의 닫기 버튼 또는 ESC 키로 팝업 닫기
+
+```html
+<button onclick="document.querySelector('dialog').showModal()">팝업 열기</button>
+
+ <dialog class="popup-wrap">
+  <div class="popup-container">
+      <h2 class="text-ir">훈련하러가기 팝업내용</h2>
+      <div class="popup-title">
+      ...
+  <button class="btn main-bg-btn close-btn" onclick="document.querySelector('dialog').close()">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+</dialog>
+```
+> ✅ `<dialog>`는 기본적으로 접근성이 높고, 브라우저 기본 기능을 활용해 복잡한 스크립트 없이도 모달 구현이 가능합니다.
 ---
 
 ## 🧠 기술 요약
